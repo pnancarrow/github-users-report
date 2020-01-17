@@ -1,3 +1,7 @@
+# Intro
+
+Inspired by work by [jdennes](]ttps://gist.github.com/jdennes/11404512) and [jsimpson](https://github.com/jsimpson/github-organization-reports). 
+
 # Usage:
 
 Get set up:
@@ -12,12 +16,12 @@ Bundle (we're going to use [Octokit](https://github.com/octokit/octokit.rb)):
 $ bundle install
 ```
 
-Replace `<org-username>` with the username of your organization in `export-all-members.rb` and/or `export-all-members-with-2fa-disabled.rb`.
+Set `ORG` with the name of your organization in `export-all-members.rb`.
 
 Then export all members:
 
 ```shell
-$ OCTOKIT_ACCESS_TOKEN=<yourtoken> bundle exec ruby export-all-members.rb
+$ OCTOKIT_ACCESS_TOKEN=<yourtoken> bundle exec ruby export-members.rb
 $ cat export-all.csv
 ```
 
