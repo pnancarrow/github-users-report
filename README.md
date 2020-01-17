@@ -6,7 +6,7 @@ Inspired by and adpated from work by [jdennes](https://gist.github.com/jdennes/1
 
 ## Setup
 
-Install [Octokit](https://github.com/octokit/octokit.rb)):
+Install [Octokit](https://github.com/octokit/octokit.rb):
 
 ```bash
 $ bundle install
