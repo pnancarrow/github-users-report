@@ -1,33 +1,28 @@
-# Intro
+# Github Users Report
 
-Inspired by work by [jdennes](]ttps://gist.github.com/jdennes/11404512) and [jsimpson](https://github.com/jsimpson/github-organization-reports). 
+This can be used to generate a report of users with access to your Github organization into a csv file. It includes user role (member, admin, or outside collaborator) and team membership.
 
-# Usage:
+Inspired by and adpated from work by [jdennes](https://gist.github.com/jdennes/11404512) and [jsimpson](https://github.com/jsimpson/github-organization-reports). 
 
-Get set up:
+## Setup
 
-```shell
-$ git clone https://gist.github.com/11404512.git export-members; cd export-members 
-```
+Install [Octokit](https://github.com/octokit/octokit.rb)):
 
-Bundle (we're going to use [Octokit](https://github.com/octokit/octokit.rb)):
-
-```shell
+```bash
 $ bundle install
 ```
 
-Set `ORG` with the name of your organization in `export-all-members.rb`.
+Set `ORG` with the name of your Github organization:
 
-Then export all members:
-
-```shell
-$ OCTOKIT_ACCESS_TOKEN=<yourtoken> bundle exec ruby export-members.rb
-$ cat export-all.csv
+```
+# Add you Github organization name here
+ORG = "[ORG NAME HERE]"
 ```
 
-or, export members with 2FA disabled:
+Generate a Github API token if you don't already have one. It will need admin read permissions to your organization. A token can be created by navigating to `Settings` > `Developer settings` > `Personal access tokens` > `Generate new token`. 
 
-```shell
-$ OCTOKIT_ACCESS_TOKEN=<yourtoken> bundle exec ruby export-all-members-with-2fa-disabled.rb
-$ cat export-2fa-disabled.csv
+## Use
+
+```bash
+$ OCTOKIT_ACCESS_TOKEN=[YOUR API TOKEN HERE] bundle exec ruby github-users-report.rb
 ```
